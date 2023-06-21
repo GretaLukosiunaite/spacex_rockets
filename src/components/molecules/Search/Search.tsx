@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Input from '../../atoms/Input';
 import ICONS from '../../../assets/icons';
-import {
-  StyledTopLine,
+import { StyledLine,
   StyledTitleContainer,
   StyledResultsContainer,
   StyledSearchContainer,
 } from './styles';
 
+
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
 
   return (
-    <StyledTopLine>
+    <StyledLine>
       <StyledTitleContainer>
         <h3>SpaceX rockets</h3>
       </StyledTitleContainer>
@@ -28,7 +28,7 @@ const Search = () => {
           placeholder='Search'
         />
       </StyledSearchContainer>
-    </StyledTopLine>
+    </StyledLine>
   );
 };
 
