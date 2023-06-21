@@ -38,11 +38,7 @@ class Api_instance {
     return response;
   }
 
-//   public async getCategories(): Promise<string[]> {
-//     const categories: string[] = await httpClient.get(this.categories);
 
-//     return categories;
-//   }
 }
 
 export const API = new Api_instance();
