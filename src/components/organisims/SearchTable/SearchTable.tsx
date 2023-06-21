@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchFilter from '../../molecules/SearchFilter';
+import SearchFilter from '../../molecules/Search';
 import Table from '../../molecules/Table';
 
 const SearchTable = () => {
