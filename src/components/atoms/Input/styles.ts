@@ -8,7 +8,8 @@ export const SyledInputDiv = styled.div`
   border-radius: 50px;
 
   width: 753px;
-  padding: 10px 0 9px 15px;
+  height: 35px;
+  padding: 8px 0 8px 15px;
 `;
 
 export const SyledIcon = styled.span`
@@ -32,5 +33,6 @@ export const SyledInput = styled.input`
 
   &::placeholder {
     color: #9b9eac;
+    line-height: 100%;
   }
 `;
