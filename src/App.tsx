@@ -2,6 +2,7 @@
 import './App.css';
 import React from 'react';
 import { API } from './shared/api';
+import SearchTable from './components/organisims/SearchTable';
 
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
       });
   }, []);
 
-  return <div>App Component</div>;
+  
+
+  return <div>App Componen<SearchTable/></div>;
 }
 
 export default App;
