@@ -33,6 +33,5 @@ export const SyledInput = styled.input`
 
   &::placeholder {
     color: #9b9eac;
-    line-height: 100%;
   }
 `;
