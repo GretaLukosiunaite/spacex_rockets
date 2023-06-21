@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import SearchFilter from '../../molecules/Search';
 import Table from '../../molecules/Table';
 import { API } from '../../../shared/api';
+import Search from '../../molecules/Search';
+import { IRocket } from '../../molecules/Table/Table';
 
 const tableHeadline = [
-    'Rocket name',
-    'Diameter',
-    'Height',
-    'Mass',
-    'Cost per launch',
-  ];
-  
+  'Rocket name',
+  'Diameter',
+  'Height',
+  'Mass',
+  'Cost per launch',
+];
 
 const SearchTable = () => {
-  const [rockets, setRockets] = useState([]);
+  const [rockets, setRockets] = useState<IRocket[]>([]);
+  const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,11 +28,37 @@ const SearchTable = () => {
     fetchData();
   }, []);
 
+  const handleSearchValueChange = (value: string) => {
+    setSearchValue(value);
+  };
+
+  const filteredRockets = rockets.filter((rocket) => {
+    const searchLower = searchValue.toLowerCase();
+    const diameter = rocket.diameter.meters.toString();
+    const height = rocket.height.meters.toString();
+    const mass = rocket.mass.kg.toString();
+    const costPerLaunch = rocket.cost_per_launch.toString();
+
+    return (
+      rocket.rocket_name.toLowerCase().includes(searchLower) ||
+      rocket.description.toLowerCase().includes(searchLower) ||
+      rocket.rocket_id.toLowerCase().includes(searchLower) ||
+      rocket.rocket_type.toLowerCase().includes(searchLower) ||
+      diameter.includes(searchLower) ||
+      height.includes(searchLower) ||
+      mass.includes(searchLower) ||
+      costPerLaunch.includes(searchLower)
+    );
+  });
+
   return (
     <div>
-      <SearchFilter />
+      <Search
+        searchValue={searchValue}
+        setSearchValue={handleSearchValueChange}
+      />
       {rockets.length > 0 ? (
-        <Table rockets={rockets} headline={tableHeadline}/>
+        <Table rockets={filteredRockets} headline={tableHeadline} />
       ) : (
         <p>Loading...</p>
       )}

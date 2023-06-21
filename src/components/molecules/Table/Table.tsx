@@ -23,26 +23,12 @@ export interface IRocket {
   rocket_type: string;
 }
 
-// interface ISearchData {
-//   headlines: string[];
-//   rockets: IRocket[];
-// }
-
-// interface ISeatchProps {
-//   data: ISearchData;
-// }
-
 interface ITableProps {
   headline: string[];
   rockets: IRocket[];
 }
 
 const Table = ({headline, rockets}: ITableProps) => {
-  // const [searchValue, setSearchValue] = useState('');
-
-  // const filteredRockets = props.rockets.filter((rocket) =>
-  //   rocket.rocket_name.toLowerCase().includes(searchValue.toLowerCase())
-  // );
 
   return (
     <StyledTable>

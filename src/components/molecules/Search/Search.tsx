@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import Input from '../../atoms/Input';
 import ICONS from '../../../assets/icons';
-import { StyledLine,
+import {
+  StyledLine,
   StyledTitleContainer,
   StyledResultsContainer,
   StyledSearchContainer,
 } from './styles';
 
+interface ISearchProps {
+  searchValue: string;
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
+}
 
-const Search = () => {
-  const [searchValue, setSearchValue] = useState('');
+const Search = ({ searchValue, setSearchValue }: ISearchProps) => {
 
   return (
     <StyledLine>
@@ -23,7 +27,7 @@ const Search = () => {
         <Input
           type={'text'}
           value={searchValue}
-          setvalue={setSearchValue}
+          setValue={setSearchValue}
           icon={ICONS.search}
           placeholder='Search'
         />
