@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Input from '../../atoms/Input';
 import ICONS from '../../../assets/icons';
 import {
@@ -10,18 +9,18 @@ import {
 
 interface ISearchProps {
   searchValue: string;
-  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
+  setSearchValue: React.Dispatch<React.SetStateAction<string>> | (() => void);
+  resultsCount: number;
 }
 
-const Search = ({ searchValue, setSearchValue }: ISearchProps) => {
-
+const Search = ({ searchValue, setSearchValue, resultsCount }: ISearchProps) => {
   return (
     <StyledLine>
       <StyledTitleContainer>
         <h3>SpaceX rockets</h3>
       </StyledTitleContainer>
       <StyledResultsContainer>
-        <p>3 Results</p>
+        <p>{resultsCount} Results</p>
       </StyledResultsContainer>
       <StyledSearchContainer>
         <Input
