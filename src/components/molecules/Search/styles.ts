@@ -10,7 +10,6 @@ export const StyledLine = styled.div`
   padding: 10px 17px 7px 24px;
   max-width: 1097px;
   width: 100%;
-  margin-bottom: 54px;
 `;
 export const StyledTitleContainer = styled.div`
    min-width: 191px;

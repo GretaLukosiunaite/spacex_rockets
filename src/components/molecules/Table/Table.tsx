@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-
 import { StyledTable, StyledHeadlineRow, StyledRow, StyledHeadlineContainer, StyledDataContainer, } from './styles';
 
 export interface IRocket {
@@ -54,7 +52,7 @@ const Table = ({headline, rockets}: ITableProps) => {
             <p>{rocket.mass.kg}kg</p>
           </StyledDataContainer>
           <StyledDataContainer>
-            <p>{rocket.cost_per_launch}</p>
+            <p>${rocket.cost_per_launch.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</p>
           </StyledDataContainer>
         </StyledRow>
       ))}

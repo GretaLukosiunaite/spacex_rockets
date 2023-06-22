@@ -48,6 +48,7 @@ export const StyledRow = styled.div`
   padding: 17px 67px 18px 29px;
   max-width: 1097px;
   width: 100%;
+
 `;
 
 export const StyledDataContainer = styled.div`
@@ -81,3 +82,4 @@ export const StyledDataContainer = styled.div`
     margin-right: 151px;
   }
 `;
+
