@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-
 import { StyledTable, StyledHeadlineRow, StyledRow, StyledHeadlineContainer, StyledDataContainer, } from './styles';
 
 export interface IRocket {
