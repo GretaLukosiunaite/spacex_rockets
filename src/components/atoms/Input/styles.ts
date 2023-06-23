@@ -7,7 +7,7 @@ export const SyledInputDiv = styled.div`
   background-color: #f5f5fa;
   border-radius: 50px;
 
-  min-width: 753px;
+  width: 753px;
   height: 35px;
   padding: 8px 0 8px 15px;
 `;
