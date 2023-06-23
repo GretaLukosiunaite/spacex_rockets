@@ -8,8 +8,7 @@ export const StyledLine = styled.div`
   align-items: center;
 
   padding: 10px 17px 7px 24px;
-  max-width: 1097px;
-  width: 100%;
+  width: 1097px;
 `;
 export const StyledTitleContainer = styled.div`
    min-width: 191px;

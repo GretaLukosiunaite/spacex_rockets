@@ -5,8 +5,7 @@ export const StyledTable = styled.div`
   flex-direction: column;
 
   justify-content: center;
-  max-width: 1097px;
-  width: 100%;
+ width: 1097px;
   gap: 3px;
 `;
 

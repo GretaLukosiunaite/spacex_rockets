@@ -20,7 +20,7 @@ const SearchTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await API.getProducts();
+        const data = await API.getItems();
         setRockets(data);
       } catch (error) {
         console.error('Error:', error);
