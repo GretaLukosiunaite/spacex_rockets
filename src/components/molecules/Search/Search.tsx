@@ -4,7 +4,7 @@ import {
   StyledLine,
   StyledTitleContainer,
   StyledResultsContainer,
-  StyledSearchContainer,
+  StyledSearchContainer, StyledTopBox
 } from './styles';
 
 interface ISearchProps {
@@ -16,12 +16,14 @@ interface ISearchProps {
 const Search = ({ searchValue, setSearchValue, resultsCount }: ISearchProps) => {
   return (
     <StyledLine>
+      <StyledTopBox>
       <StyledTitleContainer>
         <h3>SpaceX rockets</h3>
       </StyledTitleContainer>
       <StyledResultsContainer>
         <p>{resultsCount} Results</p>
       </StyledResultsContainer>
+      </StyledTopBox>
       <StyledSearchContainer>
         <Input
           type={'text'}

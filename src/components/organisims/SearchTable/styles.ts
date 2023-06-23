@@ -5,10 +5,12 @@ export const StyledSearchTable = styled.div`
   flex-direction: column;
   gap: 52px;
   align-items: flex-start;
-  margin-top: 27px;
+  margin: 27px 0px 0 45px;
   overflow: auto;
 
-  @media (min-width: 964px) {
+  @media (min-width: 1090px) {
     align-items: center;
+    max-width: 1097px;
+    margin: 27px auto 0 auto;
   }
 `;
