@@ -20,25 +20,17 @@ class Api_instance {
     this.items = '/v3/rockets';
   }
 
-  public async getProducts(): Promise<IRocket[]> {
+  public async getItems(): Promise<IRocket[]> {
     const items: IRocket[] = await httpClient.get(this.items);
 
     return items;
   }
 
-  public async getProduct(id: string): Promise<IRocket> {
+  public async getItem(id: string): Promise<IRocket> {
     const item: IRocket = await httpClient.get(this.items + '/' + id);
 
     return item;
   }
-
-  public async addProduct(item: IRocket) {
-    const response = await httpClient.post(this.items, item);
-
-    return response;
-  }
-
-
 }
 
 export const API = new Api_instance();
