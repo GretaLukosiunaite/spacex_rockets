@@ -7,9 +7,14 @@ export const SyledInputDiv = styled.div`
   background-color: #f5f5fa;
   border-radius: 50px;
 
-  width: 753px;
+  max-width: 753px;
+  width: 100%;
   height: 35px;
   padding: 8px 0 8px 15px;
+
+  @media (min-width: 1090px) {
+    margin-right: 20px;
+  }
 `;
 
 export const SyledIcon = styled.span`

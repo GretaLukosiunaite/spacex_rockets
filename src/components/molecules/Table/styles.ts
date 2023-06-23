@@ -5,15 +5,17 @@ export const StyledTable = styled.div`
   flex-direction: column;
 
   justify-content: center;
- width: 1097px;
+  width: 100%;
   gap: 3px;
 `;
 
 export const StyledHeadlineRow = styled.div`
   display: flex;
   align-items: center;
-  padding: 0px 57px 0px 27px;
+  justify-content: space-between;
+  padding: 0px 67px 0px 27px;
   width: 100%;
+  gap: 10px;
 `;
 
 export const StyledHeadlineContainer = styled.div`
@@ -24,17 +26,23 @@ export const StyledHeadlineContainer = styled.div`
     font-size: 0.875rem;
     line-height: 140.62%;
     letter-spacing: 0.1px;
+    text-align: right;
+  }
+
+  &:nth-child(1) h6 {
     text-align: left;
   }
 
-  &:nth-child(1),
-  &:nth-child(4) {
-    margin-right: 84px;
+   &:nth-child(2) {
+    min-width: 80px;
   }
 
-  &:nth-child(3) {
-    margin: 0 147px;
+  @media (min-width: 1090px) {
+    &:nth-child(2) {
+    min-width: 109px;
   }
+  }
+ 
 `;
 
 export const StyledRow = styled.div`
@@ -43,11 +51,11 @@ export const StyledRow = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   padding: 17px 67px 18px 29px;
-  max-width: 1097px;
   width: 100%;
-
+  gap: 10px;
 `;
 
 export const StyledDataContainer = styled.div`
@@ -65,20 +73,13 @@ export const StyledDataContainer = styled.div`
     text-align: left;
   }
 
-  &:nth-child(1) {
-    margin-right: 33px;
-  }
-
   &:nth-child(2) {
-    margin-right: 131px;
+    min-width: 80px;
   }
 
-  &:nth-child(3) {
-    margin-right: 140px;
+  @media (min-width: 1090px) {
+    &:nth-child(2) {
+    min-width: 109px;
   }
-
-  &:nth-child(4) {
-    margin-right: 151px;
   }
 `;
-
